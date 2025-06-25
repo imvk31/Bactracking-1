@@ -19,7 +19,10 @@ class CombinationSum {
         }
         //No Choose
         helper(candidates, target, index+1, res, path);
+
         path.add(candidates[index]);
+        
+        //Choose
         helper(candidates, target - candidates[index], index, res, path);
 
         path.remove(path.size()-1);
